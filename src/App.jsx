@@ -23,6 +23,7 @@ import { AppWrapper } from './App.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectToken } from './redux/selesctors';
 import { getCurrentUser, setAuthToken } from './redux/operations';
+// import Main from './components/ChatGPT/Main.jsx';
 
 function PrivateRoute({ children }) {
   const token = useSelector(selectToken);
@@ -144,6 +145,14 @@ function App() {
               </PublicRoute>
             }
           />
+          {/* <Route
+            path="chatgpt"
+            element={
+              <PublicRoute>
+                <Main />
+              </PublicRoute>
+            }
+          /> */}
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>

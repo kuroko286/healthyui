@@ -62,7 +62,7 @@ const DiaryItem = ({ title, image }) => {
         <DiaryImage src={image} alt="Plate" />
         <Title>{title}</Title>
       </TitleWrap>
-      {nutritionInfo && nutritionInfo.foods.length === 0 && (
+      {nutritionInfo && !nutritionInfo.foods && (
         <AddButton onClick={toggleModal}>+ Record your meal</AddButton>
       )}
       {!nutritionInfo && (
