@@ -179,7 +179,7 @@ export const deleteFoodIntake = createAsyncThunk(
   async (mealType, thunkAPI) => {
     try {
       const res = await axios.delete('/meals/food-intake', {
-        data: { mealType },
+        data: mealType,
       });
       toast.success('Meal deleted');
       return res.data;
