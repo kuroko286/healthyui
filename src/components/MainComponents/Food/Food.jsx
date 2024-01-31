@@ -15,6 +15,7 @@ import { selectUserMeals, selectUserData } from '../../../redux/selesctors.js';
 export default function Food() {
   const dailyMeals = useSelector(selectUserMeals);
   const userStats = useSelector(selectUserData);
+  // console.log(dailyMeals);
 
   return (
     <Container>

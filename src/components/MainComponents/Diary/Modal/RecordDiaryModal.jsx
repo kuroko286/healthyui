@@ -45,7 +45,7 @@ const RecordDiaryModal = ({ onClose, image, mealType, onRecord }) => {
       try {
         if (values.foods && values.foods.length > 0 && values.foods[0]) {
           const foodIntakeData = {
-            mealType: mealType.toLowerCase(),
+            mealType: mealType.toUpperCase(),
             foods: values.foods.map((food) => ({
               name: food.name ? food.name : 'string',
               nutrition: {

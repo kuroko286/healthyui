@@ -10,7 +10,7 @@ import icons from '../../../assets/icons.svg';
 import { useSelector } from 'react-redux';
 import { selectUserData } from '../../../redux/selesctors';
 
-export default function DailyGoal(props) {
+export default function DailyGoal() {
   const userData = useSelector(selectUserData);
 
   return (

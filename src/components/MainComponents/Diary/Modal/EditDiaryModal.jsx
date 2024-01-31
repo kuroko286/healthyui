@@ -65,7 +65,7 @@ export default function EditDiaryModal({
           const firstFood = values.foods[0];
 
           const foodIntakeData = {
-            mealType: mealType.toLowerCase(),
+            mealType: mealType.toUpperCase(),
             foodDetails: {
               name: firstFood.name ? firstFood.name : 'string',
               nutrition: {
