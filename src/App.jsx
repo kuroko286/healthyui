@@ -24,6 +24,7 @@ import { AppWrapper } from './App.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectToken } from './redux/selesctors';
 import { getCurrentUser, setAuthToken } from './redux/operations';
+// import Oauth2Redirect from './pages/Oauth2Page/Oauth2Redirect';
 
 function PrivateRoute({ children }) {
   const token = useSelector(selectToken);
@@ -153,6 +154,7 @@ function App() {
               </PublicRoute>
             }
           />
+          {/* <Route path="/oauth2/redirect" element={<Oauth2Redirect />} /> */}
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
